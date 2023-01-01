@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,39 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { PropertyName } from '@stdlib/types/object';
 
 /**
-* Define a non-enumerable read-write accessor.
+* Getter function.
 *
-* @module @stdlib/utils-define-nonenumerable-read-write-accessor
+* @returns property value
+*/
+type Getter = () => any;
+
+/**
+* Setter function.
+*
+* @param value - property value
+*/
+type Setter = ( x: any ) => void;
+
+/**
+* Defines a non-enumerable read-write accessor.
+*
+* ## Notes
+*
+* -   Non-enumerable read-write accessors are non-configurable.
+*
+* @param obj - object on which to define the property
+* @param prop - property name
+* @param getter - get accessor
+* @param setter - set accessor
 *
 * @example
-* var setNonEnumerableReadWriteAccessor = require( '@stdlib/utils-define-nonenumerable-read-write-accessor' );
-*
 * function getter() {
 *     return name + ' foo';
 * }
@@ -47,12 +70,9 @@
 * v = obj.foo;
 * // returns 'beep foo'
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function setNonEnumerableReadWriteAccessor( obj: any, prop: PropertyName, getter: Getter, setter: Setter ): void; // tslint:disable-line: max-line-length
 
 
 // EXPORTS //
 
-module.exports = main;
+export = setNonEnumerableReadWriteAccessor;

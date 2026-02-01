@@ -44,7 +44,7 @@ limitations under the License.
 <!-- eslint-disable id-length -->
 
 ```javascript
-import setNonEnumerableReadWriteAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-write-accessor@esm/index.mjs';
+import setNonEnumerableReadWriteAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-write-accessor@v0.2.3-esm/index.mjs';
 ```
 
 #### setNonEnumerableReadWriteAccessor( obj, prop, getter, setter )
@@ -104,7 +104,7 @@ v = obj.foo;
 <body>
 <script type="module">
 
-import setNonEnumerableReadWriteAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-write-accessor@esm/index.mjs';
+import setNonEnumerableReadWriteAccessor from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-write-accessor@v0.2.3-esm/index.mjs';
 
 function Foo( name ) {
     if ( !(this instanceof Foo) ) {
